@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Practice Suite">
+
+
+    <test name="Test1Google" enabled="true">
+        <parameter name="browserName" value="firefox"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="Test1Yandex" enabled="false">
+        <parameter name="browserName" value="test@123"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
