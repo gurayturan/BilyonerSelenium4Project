@@ -1,10 +1,16 @@
 package commons;
 
+import io.qameta.allure.Allure;
+import io.qameta.allure.model.Status;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.testng.Assert;
 
+import java.io.ByteArrayInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Paths;
@@ -13,7 +19,7 @@ public class Parser {
     JSONParser parser = new JSONParser();
     private static String json="";
     private static String OS = System.getProperty("os.name").toLowerCase();
-    CommonLib cm=new CommonLib();
+
 
     public Parser()
     {
@@ -24,10 +30,10 @@ public class Parser {
         Page returnPage = new Page();
         JSONObject object = null;
         try {
-            object = (JSONObject) parser.parse(new FileReader(json));
-            cm.allureReport(StepResultType.FAIL,"page json file is found("+mypage+".json)",false);
+            object = (JSONObject) parser.parse(new FileReader(json+""+mypage+".json"));
+            allureReport(StepResultType.PASS,"page json file is found("+mypage+".json)",false);
         } catch (IOException | ParseException e) {
-            cm.allureReport(StepResultType.FAIL,"page json file is not found("+mypage+".json)",false);
+            allureReport(StepResultType.FAIL,"page json file is not found("+mypage+".json)",false);
             e.printStackTrace();
         }
 
@@ -53,10 +59,11 @@ public class Parser {
         setPath();
         JSONObject object = null;
         try {
-            object = (JSONObject) parser.parse(new FileReader(json));
-            cm.allureReport(StepResultType.FAIL,"page json file is found("+mypage+".json)",false);
+            System.out.println(json+""+mypage+".json");
+            object = (JSONObject) parser.parse(new FileReader(json+""+mypage+".json"));
+            allureReport(StepResultType.PASS,"page json file is found("+mypage+".json)",false);
         } catch (IOException | ParseException e) {
-            cm.allureReport(StepResultType.FAIL,"page json file is not found("+mypage+".json)",false);
+            allureReport(StepResultType.FAIL,"page json file is not found("+mypage+".json)",false);
             e.printStackTrace();
         }
         JSONArray array = (JSONArray) object.get("pages");
@@ -79,10 +86,10 @@ public class Parser {
         Element returnElement = new Element();
         JSONObject object = null;
         try {
-            object = (JSONObject) parser.parse(new FileReader(json));
-            cm.allureReport(StepResultType.FAIL,"page json file is found("+mypage+".json)",false);
+            object = (JSONObject) parser.parse(new FileReader(json+""+mypage+".json"));
+            allureReport(StepResultType.PASS,"page json file is found("+mypage+".json)",false);
         } catch (IOException | ParseException e) {
-            cm.allureReport(StepResultType.FAIL,"page json file is not found("+mypage+".json)",false);
+            allureReport(StepResultType.FAIL,"page json file is not found("+mypage+".json)",false);
             e.printStackTrace();
         }
 
@@ -152,16 +159,16 @@ public class Parser {
 
         if (isWindows()) {
             System.out.println("This is Windows");
-            json = Paths.get("").toAbsolutePath().toString() + "\\src\\test\\java\\pages\\page.json";
+            json = Paths.get("").toAbsolutePath().toString() + "\\src\\test\\java\\pages\\";
         } else if (isMac()) {
             System.out.println("This is Mac");
-            json = Paths.get("").toAbsolutePath().toString() + "/src/test/java/pages/page.json";
+            json = Paths.get("").toAbsolutePath().toString() + "/src/test/java/pages/";
         } else if (isUnix()) {
             System.out.println("This is Unix or Linux");
-            json = Paths.get("").toAbsolutePath().toString() + "/src/test/java/pages/page.json";
+            json = Paths.get("").toAbsolutePath().toString() + "/src/test/java/pages/";
         } else if (isSolaris()) {
             System.out.println("This is Solaris");
-            json = Paths.get("").toAbsolutePath().toString() + "/src/test/java/pages/page.json";
+            json = Paths.get("").toAbsolutePath().toString() + "/src/test/java/pages/";
         } else {
             System.out.println("Your OS is not support!!");
         }
@@ -183,5 +190,23 @@ public class Parser {
 
     public static boolean isSolaris() {
         return (OS.indexOf("sunos") >= 0);
+    }
+
+    public void allureReport(StepResultType result, String message, boolean ssFlag) {
+        try {
+            System.out.println(message);
+
+            if (result.toString().equalsIgnoreCase("PASS")) {
+                Allure.step(message, Status.PASSED);
+            } else if (result.toString().equalsIgnoreCase("INFO")) {
+                Allure.step(message, Status.SKIPPED);
+            } else if (result.toString().equalsIgnoreCase("FAIL")) {
+                Allure.step(message, Status.FAILED);
+                Assert.fail(message);
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

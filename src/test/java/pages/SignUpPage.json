@@ -2,7 +2,7 @@
   "pages": [
     {
       "pageInfo": {
-        "pageName": "page",
+        "pageName": "SignUpPage",
         "parentName": "",
         "waitElement": ""
       },

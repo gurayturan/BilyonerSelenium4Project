@@ -1,0 +1,103 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "OrderModalPage",
+        "parentName": "",
+        "waitElement": "order modal"
+      },
+      "elements": [
+        {
+          "elementName": "order modal title",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"orderModalLabel\" and text()=\"Place order\"]"
+        },
+        {
+          "elementName": "order modal",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"orderModal\" and @style=\"display: block;\"]"
+        },
+        {
+          "elementName": "htc one m9 order modal price",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"totalm\" and text()=\"Total: 700\"]"
+        },
+        {
+          "elementName": "name input",
+          "elementType": "xpath",
+          "elementValue": "//input[@id=\"name\"]"
+        },
+        {
+          "elementName": "name label",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"orderModal\"]//div[@class=\"form-group\"]/label[text()=\"Name:\"]"
+        },
+        {
+          "elementName": "city input",
+          "elementType": "xpath",
+          "elementValue": "//input[@id=\"city\"]"
+        },
+        {
+          "elementName": "city label",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"orderModal\"]//div[@class=\"form-group\"]/label[text()=\"City:\"]"
+        },
+        {
+          "elementName": "credit card input",
+          "elementType": "xpath",
+          "elementValue": "//input[@id=\"card\"]"
+        },
+        {
+          "elementName": "credit card label",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"orderModal\"]//div[@class=\"form-group\"]/label[text()=\"Credit card:\"]"
+        },
+        {
+          "elementName": "month input",
+          "elementType": "xpath",
+          "elementValue": "//input[@id=\"month\"]"
+        },
+        {
+          "elementName": "month label",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"orderModal\"]//div[@class=\"form-group\"]/label[text()=\"Month:\"]"
+        },
+        {
+          "elementName": "year input",
+          "elementType": "xpath",
+          "elementValue": "//input[@id=\"year\"]"
+        },
+        {
+          "elementName": "year label",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"orderModal\"]//div[@class=\"form-group\"]/label[text()=\"Year:\"]"
+        },
+        {
+          "elementName": "order modal close button",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"orderModal\"]//div/button[@class=\"btn btn-secondary\" and text()=\"Close\"]"
+        },
+        {
+          "elementName": "order modal purchase button",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"orderModal\"]//div/button[@class=\"btn btn-primary\" and text()=\"Purchase\"]"
+        },
+        {
+          "elementName": "success icon",
+          "elementType": "xpath",
+          "elementValue": "//div[@class=\"sa-icon sa-success animate\"]"
+        },
+        {
+          "elementName": "thanks for purchase text",
+          "elementType": "xpath",
+          "elementValue": "//h2[text()=\"Thank you for your purchase!\"]"
+        },
+        {
+          "elementName": "ok button",
+          "elementType": "xpath",
+          "elementValue": "//button[@class=\"confirm btn btn-lg btn-primary\" and text()=\"OK\"]"
+        }
+      ]
+    }
+  ]
+}

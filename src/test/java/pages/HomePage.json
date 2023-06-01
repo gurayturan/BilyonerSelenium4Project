@@ -1,0 +1,104 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "HomePage",
+        "parentName": "",
+        "waitElement": ""
+      },
+      "elements": [
+        {
+          "elementName": "product store title",
+          "elementType": "xpath",
+          "elementValue": "//a[contains(text(),'PRODUCT STORE')]"
+        },
+        {
+          "elementName": "navbar home button",
+          "elementType": "xpath",
+          "elementValue": "//li[@class='nav-item active']/a[contains(text(),'Home')]"
+        },
+        {
+          "elementName": "navbar contact button",
+          "elementType": "xpath",
+          "elementValue": "//li[@class='nav-item']/a[contains(text(),'Contact')]"
+        },
+        {
+          "elementName": "navbar cart button",
+          "elementType": "xpath",
+          "elementValue": "//li[@class='nav-item']/a[contains(text(),'Cart')]"
+        },
+        {
+          "elementName": "navbar about us button",
+          "elementType": "xpath",
+          "elementValue": "//li[@class='nav-item']/a[contains(text(),'About us')]"
+        },
+        {
+          "elementName": "navbar log in button",
+          "elementType": "xpath",
+          "elementValue": "//li[@class='nav-item']/a[contains(text(),'Log in')]"
+        },
+        {
+          "elementName": "navbar sign up button",
+          "elementType": "xpath",
+          "elementValue": "//li[@class='nav-item']/a[contains(text(),'Sign up')]"
+        },{
+          "elementName": "username welcome text",
+          "elementType": "id",
+          "elementValue": "nameofuser"
+        },
+        {
+          "elementName": "htc one m9 text",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"tbodyid\"]//a[text()=\"HTC One M9\"]"
+        },
+        {
+          "elementName": "product name text",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"tbodyid\"]/h2[@class=\"name\"]"
+        },
+
+        {
+          "elementName": "product description",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"tbodyid\"]/div[@class=\"description description-tabs\"]/div[@id=\"myTabContent\"]/div[@id=\"more-information\"]/p"
+        },
+        {
+          "elementName": "product price",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"tbodyid\"]/h3[@class=\"price-container\"]"
+        },
+
+        {
+          "elementName": "add to cart button",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"tbodyid\"]//a[@class=\"btn btn-success btn-lg\" and text()=\"Add to cart\"]"
+        },
+        {
+          "elementName": "monitors tab",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"itemc\" and text()=\"Monitors\"]"
+        },
+        {
+          "elementName": "laptops tab",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"itemc\" and text()=\"Laptops\"]"
+        },
+        {
+          "elementName": "phones tab",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"itemc\" and text()=\"Phones\"]"
+        },
+        {
+          "elementName": "categories tab",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"cat\" and text()=\"CATEGORIES\"]"
+        }
+
+
+
+
+
+      ]
+    }
+  ]
+}

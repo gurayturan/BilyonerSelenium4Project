@@ -20,16 +20,20 @@ public class BaseTest {
         System.out.println("Browser Name:"+browserName);
 
         if(browserName.equalsIgnoreCase("chrome"))
-        {  // WebDriverManager.chromedriver().setup();
+        {   WebDriverManager.chromedriver().setup();
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("start-maximized");
+            chromeOptions.addArguments("--remote-allow-origins=*");
             MyDriver.setMyDriver(new ChromeDriver(chromeOptions));
         }
         else if(browserName.equalsIgnoreCase("firefox")){
-          //  WebDriverManager.firefoxdriver().setup();
+            WebDriverManager.firefoxdriver().setup();
             FirefoxOptions firefoxOptions = new FirefoxOptions();
-            firefoxOptions.addArguments("start-maximized");
+          //  firefoxOptions.addArguments("start-maximized");
+           // firefoxOptions.addArguments()
+          //  firefoxOptions.addArguments("--remote-allow-origins=*");
             MyDriver.setMyDriver(new FirefoxDriver(firefoxOptions));
+            MyDriver.getMyDriver().manage().window().maximize();
 
         }else {
             Assert.fail("BrowserName is not valid");

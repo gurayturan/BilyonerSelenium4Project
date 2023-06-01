@@ -1,0 +1,58 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "CartPage",
+        "parentName": "",
+        "waitElement": ""
+      },
+      "elements": [
+        {
+          "elementName": "cart page title",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"page-wrapper\"]/div/div/h2[text()=\"Products\"]"
+        },
+        {
+          "elementName": "products table",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"page-wrapper\"]/div//table[@class=\"table table-bordered table-hover table-striped\"]"
+        },
+        {
+          "elementName": "products table pic header",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"page-wrapper\"]/div/div/div/table/thead/tr/th[text()=\"Pic\"]"
+        },
+        {
+          "elementName": "products table title header",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"page-wrapper\"]/div/div/div/table/thead/tr/th[text()=\"Title\"]"
+        },
+        {
+          "elementName": "products table price header",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"page-wrapper\"]/div/div/div/table/thead/tr/th[text()=\"Price\"]"
+        },
+        {
+          "elementName": "products table delete header",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"page-wrapper\"]/div/div/div/table/thead/tr/th[text()=\"x\"]"
+        },
+        {
+          "elementName": "place order button",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"page-wrapper\"]/div/div/button[text()=\"Place Order\" and @class=\"btn btn-success\"]"
+        },
+        {
+          "elementName": "product delete button",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"tbodyid\"]/tr/td/a[text()=\"Delete\"]"
+        }
+
+
+
+
+      ]
+
+    }
+  ]
+}

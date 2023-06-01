@@ -1,0 +1,55 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "LoginModalPage",
+        "parentName": "",
+        "waitElement": ""
+      },
+      "elements": [
+        {
+          "elementName": "login modal title",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"logInModalLabel\" and @class=\"modal-title\" and text()=\"Log in\"]"
+        },
+        {
+          "elementName": "username label",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"logInModal\"]//label[contains(text(),\"Username:\")]"
+        },
+        {
+          "elementName": "username input",
+          "elementType": "xpath",
+          "elementValue": "//input[@id=\"loginusername\"]"
+        },
+        {
+          "elementName": "password input",
+          "elementType": "xpath",
+          "elementValue": "//input[@id=\"loginpassword\"]"
+        },
+        {
+          "elementName": "password label",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"logInModal\"]//label[contains(text(),\"Password:\")]"
+        },
+        {
+          "elementName": "close button",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"logInModal\"]//button[@class=\"btn btn-secondary\" and text()=\"Close\"]"
+        },
+        {
+          "elementName": "login button",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"logInModal\"]//button[@class=\"btn btn-primary\" and text()=\"Log in\"]"
+        },
+        {
+          "elementName": "close icon",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"logInModal\"]//button[@class=\"close\"]"
+        }
+
+      ]
+
+    }
+  ]
+}

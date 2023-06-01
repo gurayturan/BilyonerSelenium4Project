@@ -1,13 +1,10 @@
 package runners;
 
-import com.project.commons.BaseTest;
+
+import commons.BaseTest;
 import io.cucumber.testng.*;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
 
-
-import java.io.IOException;
-import java.net.URL;
 
 @CucumberOptions(
         tags = "@test",
@@ -15,7 +12,6 @@ import java.net.URL;
                 "html:target/cucumber-reports/cucumber.html",
                 "json:target/cucumber-reports/cucumber.json",
                 "io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm"
-
         },
         features = "src/test/java/features",
         glue = "stepdef"
