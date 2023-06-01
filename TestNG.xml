@@ -2,9 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Practice Suite">
 
-
     <test name="Product Store Test Case" enabled="true">
-<!--        <parameter name="browserName" value="chrome"/>-->
+    <!--parameter name="browserName" value="chrome"/>-->
         <parameter name="browserName" value="firefox"/>
         <classes>
             <class name="runners.TestRunner"/>
