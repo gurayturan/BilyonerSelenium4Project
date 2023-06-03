@@ -1,9 +1,11 @@
 1.Çalıştırma
 
-TestNG.xml üzerinde sağ click yaparak "Run TestNG.xml" seçeneği ile çalıştırabilirisiniz. 
+    a.TestNG.xml üzerinde sağ click yaparak "Run TestNG.xml" seçeneği ile çalıştırabilirisiniz. 
 
 ![img.png](img.png)
 
+    b.Maven üzerinden çalıştırma
+![img_5.png](img_5.png)
 
 2.Browser değiştirme
 

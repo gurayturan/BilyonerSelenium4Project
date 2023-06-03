@@ -2,12 +2,18 @@ package runners;
 
 
 import commons.BaseTest;
-import io.cucumber.testng.*;
-import org.testng.annotations.*;
+import io.cucumber.testng.CucumberOptions;
+import io.cucumber.testng.FeatureWrapper;
+import io.cucumber.testng.PickleWrapper;
+import io.cucumber.testng.TestNGCucumberRunner;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 
 @CucumberOptions(
-        tags = "@Static",
+        tags = "@Dynamic",
         plugin = {"pretty",
                 "html:target/cucumber-reports/cucumber.html",
                 "json:target/cucumber-reports/cucumber.json",
@@ -16,7 +22,7 @@ import org.testng.annotations.*;
         features = "src/test/java/features",
         glue = "stepdef"
 )
-public class TestRunner extends BaseTest {
+public class TestRunner2 extends BaseTest {
     private TestNGCucumberRunner testNGCucumberRunner;
 
     @BeforeClass(alwaysRun = true)

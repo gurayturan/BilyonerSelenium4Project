@@ -2,11 +2,24 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Practice Suite">
 
-    <test name="Product Store Test Case" enabled="true">
-    <!--parameter name="browserName" value="chrome"/>-->
+    <listeners>
+        <listener class-name="listeners.TestFilterListener"></listener>
+    </listeners>
+
+    <test name="Product Store Test Case Static" enabled="true">
+    <!--parameter name="browserName" value="firefox"/>-->
         <parameter name="browserName" value="firefox"/>
         <classes>
             <class name="runners.TestRunner"/>
         </classes>
     </test> <!-- Test -->
+
+    <test name="Product Store Test Case Dynamic" enabled="true">
+        <!--parameter name="browserName" value="chrome"/>-->
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="runners.TestRunner2"/>
+        </classes>
+    </test> <!-- Test -->
+
 </suite> <!-- Suite -->
