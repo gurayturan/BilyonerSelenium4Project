@@ -199,9 +199,9 @@ public class CommonLib {
             webElement =  myDriver.findElement(getElementLocator(element));
             style = webElement.getAttribute("style");
             highLighElement(webElement);
-            allureReport(StepResultType.PASS, "Element is found", true);
+            allureReport(StepResultType.PASS, element +"Element is found", true);
         } catch (Exception e) {
-            allureReport(StepResultType.FAIL, "Element is not found", true);
+            allureReport(StepResultType.FAIL, element +"Element is not found", true);
         }
         setDefaultStyle(style, webElement);
     }
@@ -306,7 +306,6 @@ public class CommonLib {
         boolean flag=false;
         String tempUsername="";
         waitElement("signup modal title");
-        waitElement("signup modal close icon");
         waitElement("signup modal username label");
         waitElement("signup modal username input");
         waitElement("signup modal password label");

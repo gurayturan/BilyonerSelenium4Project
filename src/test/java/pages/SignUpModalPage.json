@@ -13,11 +13,6 @@
           "elementValue": "//*[@id=\"signInModalLabel\" and text()=\"Sign up\"]"
         },
         {
-          "elementName": "signup modal close icon",
-          "elementType": "xpath",
-          "elementValue": "//*[@id=\"signInModal\"]//span[text()=\"×\"]"
-        },
-        {
           "elementName": "signup modal username label",
           "elementType": "xpath",
           "elementValue": "//*[@id=\"signInModal\"]//label[text()=\"Username:\" and @for=\"sign-username\"]"

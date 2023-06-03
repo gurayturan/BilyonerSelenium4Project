@@ -6,7 +6,7 @@
         <listener class-name="listeners.TestFilterListener"></listener>
     </listeners>
 
-    <test name="Product Store Test Case Static" enabled="true">
+    <test name="ProductStoreTestCaseStatic" enabled="true">
     <!--parameter name="browserName" value="firefox"/>-->
         <parameter name="browserName" value="firefox"/>
         <classes>
@@ -14,7 +14,7 @@
         </classes>
     </test> <!-- Test -->
 
-    <test name="Product Store Test Case Dynamic" enabled="true">
+    <test name="ProductStoreTestCaseDynamic" enabled="true">
         <!--parameter name="browserName" value="chrome"/>-->
         <parameter name="browserName" value="chrome"/>
         <classes>

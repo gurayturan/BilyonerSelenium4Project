@@ -25,13 +25,13 @@ public class TestFilterListener implements IMethodInterceptor{
 
                 patterns.add(Pattern.compile(testPattern, Pattern.CASE_INSENSITIVE));
             }
+        }
             for (Pattern pattern : patterns) {
                 if (pattern.matcher(currentTestName).find()) {
                     result = true;
                     break;
                 }
             }
-        }
             return result;
         }
 
@@ -41,13 +41,20 @@ public class TestFilterListener implements IMethodInterceptor{
 
         String testNames = System.getProperty("testname");
         System.out.println(testNames);
+       System.out.println("context name:"+context.getName());
 
         if (testNames == null || testNames.trim().isEmpty()) {
+            System.out.println(0);
             return methods;
+
         } else {
+
             if (includeTest(testNames, context.getName())) {
+                System.out.println(methods);
+                System.out.println(1);
                 return methods;
             } else {
+                System.out.println(2);
                 return new ArrayList<IMethodInstance>();
             }
         }
