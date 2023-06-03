@@ -3,6 +3,7 @@ package stepdef;
 
 import commons.*;
 import io.cucumber.java.Before;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.json.simple.parser.ParseException;
@@ -120,12 +121,17 @@ public class MyStepdefs {
     }
 
     @Then("I delete items on cart")
-    public void ıDeleteItemsOnCart() {
+    public void ıDeleteItemsOnCart() throws IOException, ParseException {
         commonLib.ıDeleteItemsOnCart();
     }
 
     @Then("I check element text is equal {string} with query selector {string}")
     public void ıCheckElementTextIsEqualWithQuerySelectorTbodyidH(String arg0, String arg1) {
         commonLib.ıCheckElementTextIsEqualWithQuerySelector(arg0,arg1);
+    }
+
+    @Given("I create a username that is start with {string} and end with number {int} between {int} then save username to globalvariables as a {string} and then sign up")
+    public void ıCreateAUsernameThatIsAndEndwithNumberBetweenThenSaveUsernameToGlobalvariablesAsAAndThenSignUp(String startWith, int arg1, int arg2, String username) throws InterruptedException {
+        commonLib.ıCreateAUsernameThatIsAndEndwithNumberBetweenThenSaveUsernameToGlobalvariablesAsAAndThenSignUp(startWith,arg1,arg2,username);
     }
 }

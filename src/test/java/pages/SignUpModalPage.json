@@ -1,0 +1,53 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "SignUpModalPage",
+        "parentName": "",
+        "waitElement": ""
+      },
+      "elements": [
+        {
+          "elementName": "signup modal title",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"signInModalLabel\" and text()=\"Sign up\"]"
+        },
+        {
+          "elementName": "signup modal close icon",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"signInModal\"]//span[text()=\"×\"]"
+        },
+        {
+          "elementName": "signup modal username label",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"signInModal\"]//label[text()=\"Username:\" and @for=\"sign-username\"]"
+        },
+        {
+          "elementName": "signup modal username input",
+          "elementType": "xpath",
+          "elementValue": "//input[@id=\"sign-username\"]"
+        },
+        {
+          "elementName": "signup modal password label",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"signInModal\"]//label[text()=\"Password:\" and @for=\"sign-password\"]"
+        },
+        {
+          "elementName": "signup modal password input",
+          "elementType": "xpath",
+          "elementValue": "//input[@id=\"sign-password\"]"
+        },
+        {
+          "elementName": "signup modal close button",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"signInModal\"]//button[@class=\"btn btn-secondary\" and text()=\"Close\"]"
+        },
+        {
+          "elementName": "signup modal signup button",
+          "elementType": "xpath",
+          "elementValue": "//*[@id=\"signInModal\"]//button[@class=\"btn btn-primary\" and text()=\"Sign up\"]"
+        }
+      ]
+    }
+  ]
+}
